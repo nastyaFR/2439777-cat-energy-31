@@ -6,6 +6,10 @@
   <title>Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon32.ico">
+  <link rel="icon" href="./favicons/favicon32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./favicons/favicon152.png">
+  <link rel="manifest" href="./manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -13,8 +17,13 @@
   <header class="main-header">
     <div class="container">
       <nav class="main-nav">
-        <a class="main-nav__logo" href="#">
-          <img src="#" width="174" height="50" alt="Кэт Энерджи">
+        <a class="main-nav__logotype logotype" href="#">
+          <picture>
+            <source width="70" height="59" type="image/svg+hml" media="(min-width: 1440px)" srcset="images/logotype-picture-desktop.svg">
+            <source width="60" height="50" type="image/svg+hml" media="(min-width: 768px)" srcset="images/logotype-picture-tablet.svg">
+            <img class="logotype__picture" src="images/logotype-picture-mobil.svg" width="33" height="38" alt="Доготип Кэт Энерджи">
+          </picture>
+          <img class="logotype__name" src="images/logotype-name-mobil.svg" width="101" height="20" alt="Товарный знак Кэт Энерджи">
         </a>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
@@ -44,6 +53,11 @@
       <div class="container">
         <h1 class="section-header__title title">Функциональное<br> питание для котов</h1>
         <p class="section-header__text">Занялся собой? Займись котом!</p>
+        <picture>
+          <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/section-header-can-desktop@1x.png 1x, images/section-header-can-desktop@2x.png 2x">
+          <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/section-header-can-tablet@1x.png 1x, images/section-header-can-tablet@2x.png 2x">
+          <img class=" section-header__image" src="images/section-header-can-mobile@1x.png" srcset="images/section-header-can-mobile@2x.png 2x" width="280" height="270" alt="Оранжевая банка Кэт Энерджи со вкусом курицы">
+        </picture>
         <a class="section-header__link" href="#">подобрать программу</a>
       </div>
     </section>
@@ -110,6 +124,17 @@
         <div class="section-example__footer costs">
           <span class="costs__title">Затраты на питание:</span>
           <span class="costs__content">15 000 РУБ.</span>
+        </div>
+        <div class="section-example__container slider">
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/slider-before-tablet@1x.png 1x, images/slider-before-tablet@2x.png 2x">
+            <img class="slider__image" src="images/slider-before-mobile@1x.png" srcset="images/slider-before-mobile@2x.png 2x" width="280" height="256" alt="Фотография кота до приема Кэт Энерджи">
+          </picture>
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/slider-after-tablet@1x.png 1x, images/slider-after-tablet@2x.png 2x">
+            <img class="slider__image" src="images/slider-after-mobile@1x.png" srcset="images/slider-after-mobile@2x.png 2x" width="280" height="256" alt="Фотография кота после приема Кэт Энерджи">
+          </picture>
+          <button class="slider__button" type="button"><span class="visually-hidden">Передвинуть ползунок</span> </button>
         </div>
       </div>
     </section>
