@@ -1,0 +1,26 @@
+
+.section-example__text {
+  color: $basic-dark-gray;
+  font-family: "lato", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.section-example__list {
+  list-style: none;
+}
+
+.section-example__content {
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.section-example__caption {
+  background-color: $basic-light-gray;
+  color: $basic-dark-gray;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-size: 12px;
+  line-height: 100%;
+}

@@ -1,0 +1,22 @@
+.section-header {
+  text-align: center;
+}
+
+.section-header__title {
+  font-size: 36px;
+  line-height: 36px;
+  color: $white;
+}
+
+.section-header__text {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.section-header__link {
+  text-decoration: none;
+}
+

@@ -1,0 +1,34 @@
+
+.section-products__title {
+  font-size: 36px;
+  line-height: 36px;
+  color: $black;
+}
+
+.section-products__list {
+  list-style: none;
+}
+
+.section-products__card-title {
+  text-transform: uppercase;
+}
+
+.section-products__card-text {
+  color: $basic-dark-gray;
+  font-family: "lato", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.section-products__card-text-choice {
+  color: $basic-dark-gray4;
+  font-family: "lato", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.section-products__card-button-choice {
+  color: $basic-dark-gray;
+  background-color: $basic-gray;
+  text-transform: uppercase;
+}
