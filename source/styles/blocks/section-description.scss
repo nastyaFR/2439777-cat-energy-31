@@ -47,3 +47,51 @@
     background-size: 26px 31px;
   }
 }
+
+@media (min-width: 768px) {
+  .section-description__item {
+    position: relative;
+    height: 250px; //! временная высота
+  }
+
+  .section-description__item--nutrients {
+    background: url("../../images/stage-1.svg") no-repeat center;
+    background-size: 71px 230px;
+
+    .section-description__text::before {
+      background-size: 30px 32px;
+    }
+  }
+
+  .section-description__item--appearance {
+    background: url("../../images/stage-2.svg") no-repeat center;
+    background-size: 113px 230px;
+
+    .section-description__text::before {
+      background-size: 26px 29px;
+    }
+  }
+
+  .section-description__item--mealtime {
+    background: url("../../images/stage-3.svg") no-repeat center;
+    background-size: 113px 232px;
+
+    .section-description__text::before {
+      background-size: 25px 30px;
+    }
+  }
+
+  .section-description__item--effect {
+    background: url("../../images/stage-4.svg") no-repeat center;
+    background-size: 121px 226px;
+
+    .section-description__text::before {
+      background-size: 26px 31px;
+    }
+  }
+
+  .section-description__text::before {
+    height: 80px;
+    width: 80px;
+  }
+}
