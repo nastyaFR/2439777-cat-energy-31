@@ -8,4 +8,42 @@
   font-family: "lato", sans-serif;
   font-size: 14px;
   line-height: 18px;
+
+  &::before {
+    content: "";
+    height: 60px;
+    min-width: 60px;
+    display: block;
+    background-position: center;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+  }
+}
+
+.section-description__item--nutrients {
+  .section-description__text::before {
+    background-image: url("../../icons/leaf-icon.svg");
+    background-size: 30px 32px;
+  }
+}
+
+.section-description__item--appearance {
+  .section-description__text::before {
+    background-image: url("../../icons/appearance-icon.svg");
+    background-size: 26px 29px;
+  }
+}
+
+.section-description__item--mealtime {
+  .section-description__text::before {
+    background-image: url("../../icons/mealtime-icon.svg");
+    background-size: 25px 30px;
+  }
+}
+
+.section-description__item--effect {
+  .section-description__text::before {
+    background-image: url("../../icons/time-icon.svg");
+    background-size: 26px 31px;
+  }
 }
