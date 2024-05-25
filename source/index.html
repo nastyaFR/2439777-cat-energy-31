@@ -14,7 +14,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header background-cat background-cat--desktop">
     <div class="container">
       <nav class="main-nav">
         <a class="main-nav__logotype logotype" href="#">
@@ -25,7 +25,7 @@
           </picture>
           <img class="logotype__name" src="images/logotype-name-mobil.svg" width="101" height="20" alt="Товарный знак Кэт Энерджи">
         </a>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--hide">
           <li class="main-nav__item main-nav__item--current">
             <a class="main-nav__link" href="./index.html">
               Главная
@@ -42,14 +42,17 @@
             </a>
           </li>
         </ul>
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle main-nav__toggle--special" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <button class="main-nav__close-button main-nav__close-button--special" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </nav>
     </div>
   </header>
   <main class="main-container">
-    <section class="section-header">
+    <section class="section-header background-cat background-cat--mobile">
       <div class="container">
         <h1 class="section-header__title title">Функциональное<br> питание для котов</h1>
         <p class="section-header__text">Занялся собой? Займись котом!</p>
@@ -108,7 +111,7 @@
       </div>
     </section>
     <section class="section-example">
-      <div class="container">
+      <div class="section-example__container container">
         <h2 class="section-example__title title">Живой пример</h2>
         <p class="section-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <ul class="section-example__list">

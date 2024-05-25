@@ -6,13 +6,13 @@
   background-size: 245px 288px;
   position: relative;
   z-index: -1;
+}
 
-  .wrapper__text {
-    font-family: "lato", sans-serif;
-    color: $white;
-  }
+.wrapper__text {
+  font-family: "lato", sans-serif;
+  color: $white;
 
-  .wrapper__text::before {
+  &::before {
     content: "";
     width: 80px;
     height: 83px;

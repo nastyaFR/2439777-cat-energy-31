@@ -14,18 +14,18 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header background-cat background-cat--desktop">
     <div class="container">
       <nav class="main-nav">
         <a class="main-nav__logotype logotype" href="index.html">
           <picture>
             <source width="70" height="59" type="image/svg+hml" media="(min-width: 1440px)" srcset="images/logotype-picture-desktop.svg">
             <source width="60" height="50" type="image/svg+hml" media="(min-width: 768px)" srcset="images/logotype-picture-tablet.svg">
-            <img class="logotype__picture" src="images/logotype-picture-mobil.svg" width="33" height="38" alt="Доготип Кэт Энерджи">
+            <img class="logotype__picture" src="images/logotype-picture-mobil.svg" width="33" height="38" alt="Логотип Кэт Энерджи">
           </picture>
           <img class="logotype__name" src="images/logotype-name-mobil.svg" width="101" height="20" alt="Товарный знак Кэт Энерджи">
         </a>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--hide">
           <li class="main-nav__item">
             <a class="main-nav__link" href="./index.html">
               Главная
@@ -42,7 +42,10 @@
             </a>
           </li>
         </ul>
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle main-nav__toggle--special" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <button class="main-nav__close-button main-nav__close-button--special" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </nav>
@@ -221,7 +224,6 @@
       </ul>
       <a class="main-footer__copyright" href="#">
         <span class="main-footer__text">HTML Academy</span>
-        <img src="#" width="50" height="50" alt="Логотип html Academy">
       </a>
     </div>
   </footer>
