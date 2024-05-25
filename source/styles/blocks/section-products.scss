@@ -9,6 +9,13 @@
   list-style: none;
 }
 
+.section-products__item--more {
+  background-image: url("../../icons/plus.svg");
+  background-position: center;
+  background-size: 60px;
+  background-repeat: no-repeat;
+}
+
 .section-products__card-title {
   text-transform: uppercase;
 }
