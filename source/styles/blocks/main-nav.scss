@@ -1,53 +1,158 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.main-nav__list {
-  background-color: $white;
-  list-style: none;
-}
-
-.main-nav__item {
-  border-bottom: 1px solid $basic-light-gray2;
-}
-
-.main-nav__item:first-child {
-  border-top: 1px solid $basic-light-gray2;
-}
-
-.main-nav__link {
-  color: $black;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  &:active {
-    color: rgba($black, 0.5);
+  .main-nav__logotype {
+    min-width: 68%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-content: space-between;
+    margin-right: 94px;
   }
-}
 
-.main-nav__toggle {
-  border: none;
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-  background-image: url("../../icons/burger-button.svg");
-}
+  .main-nav__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 2;
+    background-color: $white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-.main-nav__close-button {
-  border: none;
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-  background-image: url("../../icons/cross-for-close-mob-menu.svg");
-}
+  .main-nav__item {
+    border-bottom: 1px solid $basic-light-gray2;
+  }
 
-.main-nav__list--hide {
-  display: none;
-}
+  .main-nav__item:first-child {
+    border-top: 1px solid $basic-light-gray2;
+  }
 
-.main-nav__toggle--special {
-  display: none;
-}
+  .main-nav__link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: $black;
+    padding: 22px 50px 24px;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
 
-.main-nav__close-button--special {
-  display: none;
+    &:active {
+      color: rgba($black, 0.5);
+
+      @include link-bg;
+    }
+  }
+
+  .main-nav__toggle {
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-image: url("../../icons/burger-button.svg");
+  }
+
+  .main-nav__close-button {
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-image: url("../../icons/cross-for-close-mob-menu.svg");
+  }
+
+  .main-nav__list--hide {
+    display: none;
+  }
+
+  .main-nav__toggle--special {
+    display: none;
+  }
+
+  .main-nav__close-button--special {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .main-nav__logotype {
+      min-width: 174px;
+      gap: 13px;
+    }
+
+    .main-nav__list {
+      position: static;
+      background-color: transparent;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 32px;
+    }
+
+    .main-nav__list--hide {
+      display: flex;
+    }
+
+    .main-nav__item {
+      padding: 0;
+      border: none;
+      position: relative;
+    }
+
+    .main-nav__link {
+      padding: 0;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .main-nav__item:first-child {
+      border: none;
+    }
+
+    .main-nav__item--current::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      bottom: -7px;
+      background-color: $basic-green;
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .main-nav__close-button {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .main-nav__link {
+      color: $white;
+    }
+
+    .main-nav__item--active::after {
+      background-color: $white;
+    }
+
+    .main-nav__logotype {
+      min-width: 202px;
+      gap: 14px;
+    }
+  }
 }

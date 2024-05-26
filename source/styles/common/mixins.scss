@@ -7,3 +7,12 @@
     font-display: swap;
   }
 }
+
+@mixin link-bg () {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin display-flex {
+  display: flex;
+  justify-content: center;
+}

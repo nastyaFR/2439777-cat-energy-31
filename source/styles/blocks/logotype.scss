@@ -1,0 +1,40 @@
+.logotype {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+
+    @include link-bg;
+  }
+
+  .logotype__link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  @media (min-width: 768px) {
+    .logo__link {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .page-header__list-link {
+      color: $white;
+    }
+
+    .page-header__list-item--active::after {
+      background-color: $white;
+    }
+
+    .page-header__logo {
+      min-width: 202px;
+      gap: 14px;
+    }
+  }
+}

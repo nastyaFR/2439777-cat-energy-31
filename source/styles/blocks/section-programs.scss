@@ -1,51 +1,147 @@
-.section-programs__list {
-  list-style: none;
-}
 
-.section-programs__title {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 37px;
-  text-transform: uppercase;
+.section-programs {
+  display: flex;
+  justify-content: center;
 
-  &--cat-slim::before {
-    content: "";
-    width: 50px;
-    height: 53px;
-    display: block;
-    background: url("../../icons/cat-slim.svg") no-repeat;
+  .section-programs__item {
+    margin: 0;
+    list-style: none;
+    padding: 21px 20px 18px;
+    background-color: $basic-gray;
+    display: grid;
+    grid-template-areas:
+      "title icon"
+      "text  icon"
+      "link  icon";
   }
 
-  &--cat-pro::before {
-    content: "";
-    width: 67px;
-    height: 50px;
-    display: block;
-    background: url("../../icons/cat-pro.svg") no-repeat;
+  .section-programs__title {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 37px;
+    text-transform: uppercase;
+
+    &--cat-slim::before {
+      content: "";
+      width: 50px;
+      height: 53px;
+      display: block;
+      background: url("../../icons/cat-slim.svg") no-repeat;
+    }
+
+    &--cat-pro::before {
+      content: "";
+      width: 67px;
+      height: 50px;
+      display: block;
+      background: url("../../icons/cat-pro.svg") no-repeat;
+    }
   }
-}
 
-.section-programs__text {
-  color: $basic-dark-gray;
-  font-family: "lato", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-}
+  .section-programs__text {
+    grid-area: text;
+    color: $basic-dark-gray;
+    font-family: "lato", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+  }
 
-.section-programs__link {
-  color: $black;
-  text-decoration: none;
-  text-align: center;
-  line-height: 16px;
-  text-transform: uppercase;
+  .section-programs__link {
+    grid-area: link;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: $black;
+    text-decoration: none;
+    text-align: center;
+    line-height: 16px;
+    text-transform: uppercase;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 32px;
-    height: 10px;
-    mask-image: url("../../icons/arrow-icon.svg");
-    mask-repeat: no-repeat;
-    background-color: $black;
+    &::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 10px;
+      mask-image: url("../../icons/arrow-icon.svg");
+      mask-repeat: no-repeat;
+      background-color: $black;
+    }
+  }
+
+  //! планшетная и компьютерная версия
+  @media (min-width: 768px) {
+    .section-programs__title {
+      font-size: 36px;
+      line-height: 36px;
+      text-transform: uppercase;
+
+      &--cat-slim::before {
+        display: none;
+      }
+
+      &--cat-pro::before {
+        display: none;
+      }
+    }
+
+    .section-programs__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .section-programs__link {
+      font-size: 20px;
+      line-height: normal;
+    }
+
+    .section-programs__item {
+      &--cat-slim::after {
+        grid-area: icon;
+        content: "";
+        width: 200px;
+        height: 211px;
+        display: block;
+        background: url("../../icons/cat-slim.svg") no-repeat;
+      }
+
+      &--cat-pro::after {
+        grid-area: icon;
+        content: "";
+        width: 268px;
+        height: 200px;
+        display: block;
+        background: url("../../icons/cat-pro.svg") no-repeat;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .section-programs__item {
+      &--cat-slim::after,
+      &--cat-pro::after {
+        display: none;
+      }
+    }
+
+    .section-programs__title {
+      &--cat-slim::before {
+        content: "";
+        width: 100px;
+        height: 106px;
+        display: block;
+        background: url("../../icons/cat-slim.svg") no-repeat;
+      }
+
+      &--cat-pro::before {
+        content: "";
+        width: 134px;
+        height: 100px;
+        display: block;
+        background: url("../../icons/cat-pro.svg") no-repeat;
+      }
+    }
   }
 }

@@ -2,4 +2,19 @@
 .page__body {
   height: 100%;
   width: 100%;
+
+  .page-main {
+    flex-grow: 1;
+  }
+
+
+  .page__catalog {
+    .page-header__link {
+      color: $black;
+    }
+
+    .page-header__item--active::after {
+      background-color: $basic-green;
+    }
+  }
 }
