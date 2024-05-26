@@ -88,6 +88,32 @@
   }
 }
 
+.main-footer__copyright {
+  align-items: center;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    mask-image: url("../../icons/html-logotype.svg");
+    mask-repeat: no-repeat;
+    mask-size: 27px 34px;
+    background-color: $basic-dark-gray3;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .main-footer__text {
   color: $basic-dark-gray;
   font-family: "Lato", sans-serif;
