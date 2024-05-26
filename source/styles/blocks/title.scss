@@ -1,3 +1,17 @@
 .title {
-  font-weight: 400;
+  margin: 0;
+
+  &--primari {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+  }
 }
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+

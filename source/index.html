@@ -21,7 +21,7 @@
           <picture>
             <source width="70" height="59" type="image/svg+hml" media="(min-width: 1440px)" srcset="images/logotype-picture-desktop.svg">
             <source width="60" height="50" type="image/svg+hml" media="(min-width: 768px)" srcset="images/logotype-picture-tablet.svg">
-            <img class="logotype__picture" src="images/logotype-picture-mobil.svg" width="33" height="38" alt="Логотип Кэт Энерджи">
+            <img src="images/logotype-picture-mobil.svg" width="33" height="38" alt="Логотип Кэт Энерджи">
           </picture>
           <img class="logotype__name" src="images/logotype-name-mobil.svg" width="101" height="20" alt="Товарный знак Кэт Энерджи">
         </a>
@@ -51,10 +51,10 @@
       </nav>
     </div>
   </header>
-  <main class="main-container">
+  <main class="page-main">
     <section class="section-header background-cat background-cat--mobile">
       <div class="container">
-        <h1 class="section-header__title title">Функциональное<br> питание для котов</h1>
+        <h1 class="section-header__title title title--primari">Функциональное<br> питание для котов</h1>
         <p class="section-header__text">Занялся собой? Займись котом!</p>
         <picture>
           <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/section-header-can-desktop@1x.png 1x, images/section-header-can-desktop@2x.png 2x">
@@ -83,7 +83,7 @@
     </section>
     <section class="section-description">
       <div class="container">
-        <h2 class="section-description-title title">Как это работает</h2>
+        <h2 class="section-description-title title title--primari">Как это работает</h2>
         <ul class="section-description__list">
           <li class="section-description__item section-description__item--nutrients">
             <span class="section-description__nutrients"></span>
@@ -112,21 +112,23 @@
     </section>
     <section class="section-example">
       <div class="section-example__container container">
-        <h2 class="section-example__title title">Живой пример</h2>
+        <h2 class="section-example__title title title--primari">Живой пример</h2>
         <p class="section-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="section-example__list">
-          <li class="section-example__item">
-            <p class="section-example__content">5 КГ</p>
-            <p class="section-example__caption">снижение веса</p>
-          </li>
-          <li class="section-example__item">
-            <p class="section-example__content">60 ДНЕЙ</p>
-            <p class="section-example__caption">затрачено времени</p>
-          </li>
-        </ul>
-        <div class="section-example__footer costs">
-          <span class="costs__title">Затраты на питание:</span>
-          <span class="costs__content">15 000 РУБ.</span>
+        <div class="section-example__wrapper">
+          <ul class="section-example__list">
+            <li class="section-example__item">
+              <p class="section-example__content">5 КГ</p>
+              <p class="section-example__caption">снижение веса</p>
+            </li>
+            <li class="section-example__item">
+              <p class="section-example__content">60 ДНЕЙ</p>
+              <p class="section-example__caption">затрачено времени</p>
+            </li>
+          </ul>
+          <div class="section-example__footer costs">
+            <span class="costs__title">Затраты на питание:</span>
+            <span class="costs__content">15 000 РУБ.</span>
+          </div>
         </div>
         <div class="section-example__container slider">
           <picture>
@@ -145,7 +147,6 @@
     </section>
     <section class="section-address">
       <h2 class="visually-hidden">Адрес</h2>
-      <img src="#" width="640" height="724" alt="Карта">
       <div class="container">
         <div class="section-address__info">
           <p class="section-address__text">приглашаем к сотрудничеству дилеров!</p>
@@ -155,32 +156,41 @@
         </div>
       </div>
     </section>
+    <div class="map" id="map"></div>
   </main>
   <footer class="main-footer">
     <div class="container">
-      <a class="main-footer__logotype logotype" href="#" aria-current="page">
-        <img class="logotype__name" src="images/logotype-name-mobil.svg" width="128" height="24" alt="Товарный знак Кэт Энерджи">
-      </a>
-      <ul class="social">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="http://vk.com/htmlacademy">
-            <span class="visually-hidden">Мы в Вконтакте</span>
+      <ul class="main-footer__list">
+        <li class="main-footer__item">
+          <a class="main-footer__logotype logotype" href="#" aria-current="page">
+            <img class="logotype__name" src="images/logotype-name-mobil.svg" width="128" height="24" alt="Товарный знак Кэт Энерджи">
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="http://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Мы в Ютубе</span>
-          </a>
+        <li class="main-footer__item">
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="http://vk.com/htmlacademy">
+                <span class="visually-hidden">Мы в Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="http://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Мы в Ютубе</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="http://t.me/htmlacademy">
+                <span class="visually-hidden">Мы в Телеграме</span>
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--telegram" href="http://t.me/htmlacademy">
-            <span class="visually-hidden">Мы в Телеграме</span>
+        <li class="main-footer__item">
+          <a class="main-footer__copyright" href="#">
+            <span class="main-footer__text">HTML Academy</span>
           </a>
         </li>
       </ul>
-      <a class="main-footer__copyright" href="#">
-        <span class="main-footer__text">HTML Academy</span>
-      </a>
     </div>
   </footer>
 </body>
