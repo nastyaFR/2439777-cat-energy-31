@@ -37,38 +37,3 @@
     background-color: $basic-dark-gray3;
   }
 }
-
-.social__link {
-  &--vkontakte::before {
-    content: "";
-    display: block;
-    width: 28px;
-    height: 22px;
-    mask-image: url("../../icons/vkontakte-icon.svg");
-    mask-repeat: no-repeat;
-    mask-size: 28px 22px;
-    background-color: $basic-dark-gray3;
-  }
-
-  &--youtube::before {
-    content: "";
-    display: block;
-    width: 28px;
-    height: 22px;
-    mask-image: url("../../icons/youtube-icon.svg");
-    mask-repeat: no-repeat;
-    mask-size: 28px 22px;
-    background-color: $basic-dark-gray3;
-  }
-
-  &--telegram::before {
-    content: "";
-    display: block;
-    width: 28px;
-    height: 22px;
-    mask-image: url("../../icons/telegram-icon.svg");
-    mask-repeat: no-repeat;
-    mask-size: 28px 22px;
-    background-color: $basic-dark-gray3;
-  }
-}
