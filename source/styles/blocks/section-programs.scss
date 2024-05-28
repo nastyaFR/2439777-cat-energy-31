@@ -72,6 +72,7 @@
   }
 
   //! планшетная и компьютерная версия
+
   @media (min-width: $tablet-width) {
     .section-programs__title {
       font-size: 36px;
@@ -117,6 +118,7 @@
       }
     }
   }
+
 
   @media (min-width: $desktop-width) {
     .section-programs__item {

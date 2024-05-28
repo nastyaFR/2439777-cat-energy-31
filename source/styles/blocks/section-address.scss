@@ -2,7 +2,9 @@
   .section-adress__info {
     display: flex;
     justify-content: center;
+
     min-height: 112px;
+
   }
 
   .section-address__text {
@@ -12,6 +14,7 @@
     line-height: 20px;
     text-transform: uppercase;
   }
+
 
   .section-address__address {
     color: $basic-dark-gray;
@@ -30,5 +33,6 @@
 
   @media (min-width: $desktop-width) {
     height: 400px;
+
   }
 }

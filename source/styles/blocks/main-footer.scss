@@ -36,6 +36,7 @@
     justify-content: center;
   }
 
+
   @media (min-width: $tablet-width) {
     padding: 55px 0;
 
@@ -54,6 +55,7 @@
       display: none;
     }
   }
+
 
   @media (min-width: $desktop-width) {
     padding: 66px 0;
