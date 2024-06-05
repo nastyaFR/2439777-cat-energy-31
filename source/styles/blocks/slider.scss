@@ -1,42 +1,88 @@
-.slider__button {
-  cursor: pointer;
-  background-color: $basic-dark-gray3;
-  border: none;
-  border-radius: 2px;
-  width: 4px;
-  height: 100%;
-  padding: 0;
-  display: block;
+.slider {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.slider__before {
+  clip-path: inset(0 50% 0 0);
+}
+
+.slider__after {
   position: absolute;
   top: 0;
-  left: -2px;
+  left: 0;
+  right: 0;
+  clip-path: inset(0 0 0 50%);
+}
+
+.slider__button-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 99%;
+  pointer-events: none;
+}
+
+.slider__button {
+  position: relative;
+  width: 4px;
+  height: 100%;
+  background-color: $basic-dark-gray3;
+  border: none;
+  border-radius: 4px;
+  cursor: ew-resize;
+  pointer-events: all;
+  z-index: 2;
+  flex: 0 0 4px;
+  padding: 0;
 
   &::before {
     content: "";
-    background-color: $white;
-    border: 2px solid $basic-dark-gray3;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
     position: absolute;
     top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    border-radius: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
   }
 
   &::after {
     content: "";
-    background-color: $basic-dark-gray3;
-    border: 2px solid $basic-dark-gray3;
-    width: 24px;
-    height: 18px;
     position: absolute;
     top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: $basic-dark-gray3;
+    mask-image: url("../../icons/slider-arrow.svg");
+    mask-size: cover;
     left: 50%;
-    transform: translate(-50%, 55%);
-    mask-image: url("../../icons/stack.svg#slider-arrow");
-    mask-position: 50%;
-    mask-size: 24px 18px;
-    mask-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slider__button:hover,
+.slider__button:focus-visible,
+.slider__button:hover::after,
+.slider__button:focus-visible::after {
+  background-color: $basic-green-2;
+  transition: all 0.3s;
+}
+
+.slider__button:active .slider__button:active::after {
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .slider {
+    width: 560px;
   }
 }

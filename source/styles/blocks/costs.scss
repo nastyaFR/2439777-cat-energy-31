@@ -1,5 +1,6 @@
 .costs {
   text-align: center;
+  margin: 0 0 19px;
 }
 
 .costs__title,
@@ -10,9 +11,29 @@
 }
 
 @media (min-width: $tablet-width) {
+  .costs {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    justify-content: center;
+    margin: 0 0 5px;
+    max-width: 180px;
+    text-align: end;
+  }
+
   .costs__title,
   .costs__content {
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .costs {
+    margin: 0;
+    flex-direction: row;
+    max-width: none;
+    justify-content: left;
+    gap: 67px;
   }
 }

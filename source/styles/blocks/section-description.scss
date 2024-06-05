@@ -1,119 +1,176 @@
 .section-description {
   display: flex;
   justify-content: center;
-  padding: 20px 0 49px;
+  padding: 0 0 49px;
+}
+
+.section-description__title {
+  margin-bottom: 40px;
+}
+
+.section-description__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-description__text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  color: $basic-dark-gray;
+  font-family: "lato", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+
+  &::before {
+    content: "";
+    height: 60px;
+    min-width: 60px;
+    display: block;
+    background-position: center;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+  }
+}
+
+.section-description__item--nutrients {
+  .section-description__text::before {
+    background-image: url("../../icons/leaf-icon.svg");
+    background-size: 30px 32px;
+  }
+}
+
+.section-description__item--appearance {
+  .section-description__text::before {
+    background-image: url("../../icons/appearance-icon.svg");
+    background-size: 26px 29px;
+  }
+}
+
+.section-description__item--mealtime {
+  .section-description__text::before {
+    background-image: url("../../icons/mealtime-icon.svg");
+    background-size: 25px 30px;
+  }
+}
+
+.section-description__item--effect {
+  .section-description__text::before {
+    background-image: url("../../icons/time-icon.svg");
+    background-size: 26px 31px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .section-description {
+    padding-bottom: 47px;
+    margin-bottom: 45px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: $basic-light-gray3;
+    }
+  }
 
   .section-description__title {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   .section-description__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 56px;
+  }
+
+  .section-description__item {
+    padding-top: 40px;
+    position: relative;
+    height: 280px; //! временная высота
+    max-width: 250px;
+    background-repeat: no-repeat;
+    background-position: right top;
   }
 
   .section-description__text {
     display: flex;
-    align-items: center;
-    gap: 20px;
-    margin: 0;
-    color: $basic-dark-gray;
-    font-family: "lato", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 31px;
+    font-size: 16px;
+    line-height: 24px;
 
     &::before {
-      content: "";
-      height: 60px;
-      min-width: 60px;
-      display: block;
-      background-position: center;
-      background-color: $basic-green;
-      background-repeat: no-repeat;
-    }
-  }
-
-  .section-description__item--nutrients {
-    .section-description__text::before {
-      background-image: url("../../icons/leaf-icon.svg");
-      background-size: 30px 32px;
-    }
-  }
-
-  .section-description__item--appearance {
-    .section-description__text::before {
-      background-image: url("../../icons/appearance-icon.svg");
-      background-size: 26px 29px;
-    }
-  }
-
-  .section-description__item--mealtime {
-    .section-description__text::before {
-      background-image: url("../../icons/mealtime-icon.svg");
-      background-size: 25px 30px;
-    }
-  }
-
-  .section-description__item--effect {
-    .section-description__text::before {
-      background-image: url("../../icons/time-icon.svg");
-      background-size: 26px 31px;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    .section-description__item {
-      position: relative;
-      height: 250px; //! временная высота
-    }
-
-    .section-description__item--nutrients {
-      background: url("../../images/stage-1.svg") no-repeat center;
-      background-size: 71px 230px;
-
-      .section-description__text::before {
-        background-size: 30px 32px;
-      }
-    }
-
-    .section-description__item--appearance {
-      background: url("../../images/stage-2.svg") no-repeat center;
-      background-size: 113px 230px;
-
-      .section-description__text::before {
-        background-size: 26px 29px;
-      }
-    }
-
-    .section-description__item--mealtime {
-      background: url("../../images/stage-3.svg") no-repeat center;
-      background-size: 113px 232px;
-
-      .section-description__text::before {
-        background-size: 25px 30px;
-      }
-    }
-
-    .section-description__item--effect {
-      background: url("../../images/stage-4.svg") no-repeat center;
-      background-size: 121px 226px;
-
-      .section-description__text::before {
-        background-size: 26px 31px;
-      }
-    }
-
-    .section-description__text::before {
       height: 80px;
       width: 80px;
     }
+
+    &--nutrients::before {
+      background-size: 30px 32px;
+    }
+
+    &--appearance::before {
+      background-size: 26px 29px;
+    }
+
+    &--mealtime::before {
+      background-size: 25px 30px;
+    }
+
+    &--effect::before {
+      background-size: 26px 31px;
+    }
+
+    &--effect {
+      max-width: 97%;
+    }
   }
 
-  @media (min-width: $desktop-width) {
+  .section-description__number {
+    display: flex;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $basic-gray;
+    text-align: center;
+    font-size: 280px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 280px;
 
-    .section-description__list {
-      display: flex;
+    &--one {
+      margin-right: 24px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .section-description {
+    margin-bottom: 0;
+    padding-bottom: 69px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .section-description__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section-description__item {
+    &--effect {
+      margin-right: -5px;
     }
   }
 }
