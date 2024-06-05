@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Кэт энерджи</title>
+  <title>Кэт энерджи:каталог</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon32.ico">
@@ -16,7 +16,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header" data-test="header">
     <div class="container">
       <nav class="main-header__nav main-nav">
         <a class="main-nav__logotype logotype" href="index.html">
@@ -56,7 +56,7 @@
     </div>
   </header>
   <main class="page-main">
-    <section class="section-products">
+    <section class="section-products" data-test="catalog">
       <div class="container">
         <h1 class="section-products__title title title--primari">Каталог продукции</h1>
         <ul class="section-products__list">
@@ -246,7 +246,7 @@
         </ul>
       </div>
     </section>
-    <section class="section-additionally">
+    <section class="section-additionally" data-test="additional">
       <div class="section-additionally__container container">
         <h2 class="section-additionally__title title title--secondary">Дополнительные&nbsp;товары</h2>
         <ul class="section-additionally__list">
@@ -317,7 +317,7 @@
       <div class="map" id="map"></div>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <div class="container">
       <ul class="main-footer__list">
         <li class="main-footer__item">
