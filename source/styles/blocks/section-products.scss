@@ -1,8 +1,7 @@
 .section-products {
   @include display-flex;
 
-
-  @media (min-width: $tablet-width) {
+  @media (min-width: 768px) {
     .section-products__list {
       display: flex;
       justify-content: left;
@@ -11,8 +10,7 @@
     }
   }
 
-
-  @media (min-width: $desktop-width) {
+  @media (min-width: 1440px) {
     .section-products__list {
       gap: 80px;
     }
@@ -72,8 +70,7 @@
     align-self: center;
   }
 
-
-  @media (min-width: $tablet-width) {
+  @media (min-width: 768px) {
     position: relative;
     width: 324px;
     padding: 0 38px 40px;
@@ -129,8 +126,7 @@
     }
   }
 
-
-  @media (min-width: $desktop-width) {
+  @media (min-width: 1440px) {
     width: 245px;
 
     .section-products__image-container {

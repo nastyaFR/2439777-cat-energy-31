@@ -72,8 +72,7 @@
   }
 
   //! планшетная и компьютерная версия
-
-  @media (min-width: $tablet-width) {
+  @media (min-width: 768px) {
     .section-programs__title {
       font-size: 36px;
       line-height: 36px;
@@ -119,8 +118,7 @@
     }
   }
 
-
-  @media (min-width: $desktop-width) {
+  @media (min-width: 1440px) {
     .section-programs__item {
       &--cat-slim::after,
       &--cat-pro::after {

@@ -12,23 +12,13 @@ img {
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   color: $black;
-  font-family: "oswald", sans-serif;
+  font-family: $primary-font;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  min-height: 100vh;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
+  line-height: 20px;
 }
 
 ul {

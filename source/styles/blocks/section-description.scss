@@ -62,7 +62,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: 768px) {
     .section-description__item {
       position: relative;
       height: 250px; //! временная высота
@@ -110,8 +110,7 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
-
+  @media (min-width: 1440px) {
     .section-description__list {
       display: flex;
     }

@@ -2,9 +2,6 @@
   .section-adress__info {
     display: flex;
     justify-content: center;
-
-    min-height: 112px;
-
   }
 
   .section-address__text {
@@ -15,24 +12,10 @@
     text-transform: uppercase;
   }
 
-
   .section-address__address {
     color: $basic-dark-gray;
     font-family: "lato", sans-serif;
     font-size: 14px;
     line-height: 20px;
-  }
-
-  .section-address__map iframe {
-    height: 362px;
-  }
-
-  @media (min-width: $tablet-width) {
-    height: 400px;
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 400px;
-
   }
 }

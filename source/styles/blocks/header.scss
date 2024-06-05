@@ -1,41 +1,6 @@
 .main-header {
-  display: block;
-  border-bottom: 1px solid $basic-light-gray3;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 50px;
-    padding: 10px 0 0;
-    border: none;
-    width: 704px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 50px;
-    border: none;
-    width: 1220px;
-    margin: 0 auto;
-  }
-}
-
-.main-header__logotype {
-  padding: 12px 0 10px 20px;
-
-  @media (min-width: $tablet-width) {
-    width: 174px;
-    margin-right: 94px;
-    padding: 10px 0 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0;
-    width: 202px;
-  }
-
+  @include display-flex;
+  position: relative;
+  min-height: 39px;
+  background-color: $white;
 }
