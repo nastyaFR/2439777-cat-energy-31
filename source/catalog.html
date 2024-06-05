@@ -11,50 +11,54 @@
   <link rel="apple-touch-icon" href="./favicons/favicon152.png">
   <link rel="manifest" href="./manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7cb638cc-69c9-4f0e-962b-23540dbcf2e9" defer="defer"></script>
+  <script src="scripts/castom-map.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="main-header background-cat background-cat--desktop">
+  <header class="main-header">
     <div class="container">
-      <nav class="main-nav">
+      <nav class="main-header__nav main-nav">
         <a class="main-nav__logotype logotype" href="index.html">
           <picture>
-            <source width="70" height="59" type="image/svg+hml" media="(min-width: 1440px)" srcset="images/logotype-picture-desktop.svg">
-            <source width="60" height="50" type="image/svg+hml" media="(min-width: 768px)" srcset="images/logotype-picture-tablet.svg">
+            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logotype-picture-desktop.svg">
+            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logotype-picture-tablet.svg">
             <img class="logotype__picture" src="images/logotype-picture-mobil.svg" width="33" height="38" alt="Логотип Кэт Энерджи">
           </picture>
-          <img class="logotype__name" src="images/logotype-name-mobil.svg" width="101" height="20" alt="Товарный знак Кэт Энерджи">
+          <img class="logotype__name" src="images/logotype-name-mobil.svg" width="118" height="20" alt="Товарный знак Кэт Энерджи">
         </a>
-        <ul class="main-nav__list main-nav__list--hide">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="./index.html">
-              Главная
-            </a>
-          </li>
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__link" href="./catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
-        <button class="main-nav__toggle main-nav__toggle--special" type="button">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <button class="main-nav__close-button main-nav__close-button--special" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list main-nav__list--hide">
+            <li class="main-nav__item">
+              <a class="main-nav__link catalog" href="./index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link catalog" href="./catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link catalog" href="#">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
   <main class="page-main">
     <section class="section-products">
       <div class="container">
-        <h1 class="section-products__title title">Каталог продукции</h1>
+        <h1 class="section-products__title title title--primari">Каталог продукции</h1>
         <ul class="section-products__list">
           <li class="section-products__item">
             <div class="section-products__image-container">
@@ -231,55 +235,69 @@
             </div>
             <button class="section-products__card-button button button--primary" type="button">заказать</button>
           </li>
-          <li class="section-products__item section-products__item--more">
-            <h3 class="section-products__card-title">Показать еще 100500 товаров</h3>
-            <p class="section-products__card-text-choice">На самом деле вкусов гораздо больше!</p>
-            <a class="section-products__card-button-choice" href="#">показать все</a>
+          <li class="section-products__item products-card-more">
+            <button class="products-card-more__more" type="button">
+              <span class="visually-hidden">кнопка смотреть больше товаров</span>
+            </button>
+            <h3 class="products-card-more__title">Показать еще 100500 товаров</h3>
+            <p class="products-card-more__text-choice">На самом деле вкусов гораздо больше!</p>
+            <button class="products-card-more__button-choice" type="button">показать все</button>
           </li>
         </ul>
       </div>
     </section>
     <section class="section-additionally">
-      <div class="container">
-        <h2 class="section-additionally__title">Дополнительные товары</h2>
+      <div class="section-additionally__container container">
+        <h2 class="section-additionally__title title title--secondary">Дополнительные&nbsp;товары</h2>
         <ul class="section-additionally__list">
           <li class="section-additionally__item">
             <p class="section-additionally__text">Сахарозаменитель</p>
-            <span class="section-additionally__quantity">1 упаковка (100 г)</span>
-            <span class="section-additionally__price">200 ₽</span>
-            <button class="section-additionally__button button" type="button">Заказать</button>
+            <p class="section-additionally__about">
+              <span class="section-additionally__quantity">1 упаковка (100 г)</span>
+              <span class="section-additionally__price">200 ₽</span>
+            </p>
+            <button class="section-additionally__button button button--primary" type="button">Заказать</button>
           </li>
           <li class="section-additionally__item">
             <p class="section-additionally__text">Питьевая вода</p>
-            <span class="section-additionally__quantity">5 литров</span>
-            <span class="section-additionally__price">50 ₽</span>
-            <button class="section-additionally__button button" type="button">Заказать</button>
+            <p class="section-additionally__about">
+              <span class="section-additionally__quantity">5 литров</span>
+              <span class="section-additionally__price">50 ₽</span>
+            </p>
+            <button class="section-additionally__button button button--primary" type="button">Заказать</button>
           </li>
           <li class="section-additionally__item">
             <p class="section-additionally__text">молоко</p>
-            <span class="section-additionally__quantity">1 литр</span>
-            <span class="section-additionally__price">100 ₽</span>
-            <button class="section-additionally__button button" type="button">Заказать</button>
+            <p class="section-additionally__about">
+              <span class="section-additionally__quantity">1 литр</span>
+              <span class="section-additionally__price">100 ₽</span>
+            </p>
+            <button class="section-additionally__button button button--primary" type="button">Заказать</button>
           </li>
           <li class="section-additionally__item">
             <p class="section-additionally__text">витамины</p>
-            <span class="section-additionally__quantity">1 упаковка (30 г)</span>
-            <span class="section-additionally__price">300 ₽</span>
-            <button class="section-additionally__button button" type="button">Заказать</button>
+            <p class="section-additionally__about">
+              <span class="section-additionally__quantity">1 упаковка (30 г)</span>
+              <span class="section-additionally__price">300 ₽</span>
+            </p>
+            <button class="section-additionally__button button button--primary" type="button">Заказать</button>
           </li>
         </ul>
         <div class="section-additionally__wrapper wrapper">
-          <p class="wrapper__text">Закажите все
-            и получите чехол для
-            кота в подарок!</p>
+          <p class="wrapper__text">
+            <span class="wrapper__text-gift"></span>
+            <span class="wrapper__text-caption">Закажите все<br>
+              и получите чехол для<br>
+              кота в подарок!</span>
+          </p>
         </div>
       </div>
     </section>
     <section class="section-subscribe">
-      <div class="container">
-        <h2 class="section-subscribe__title">Акции и новинки</h2>
+      <div class="section-subscribe__container container">
+        <h2 class="section-subscribe__title title title--secondary">Акции&nbsp;и&nbsp;новинки</h2>
         <p class="section-subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-        <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="email-form" action="https://echo.htmlacademy.ru/" method="get">
           <label class="email-form__label" for="subscribe-email"></label>
           <input class="email-form__input input-email" type="email" name="subscribe-email" id="subscribe-email" placeholder="кuklachev@gmail.com">
           <button class="email-form__button button button--primary" type="button">Подписаться</button>
@@ -287,22 +305,23 @@
       </div>
     </section>
     <section class="section-address">
-      <div class="container">
-        <h3 class="visually-hidden">Адрес</h3>
-        <div class="section-address__info">
-          <p class="section-address__text">приглашаем к сотрудничеству дилеров!</p>
-          <address class="section-address__address">ул.Большая
-            Конюшенная, д. 19/8
-            Санкт-Петербург</address>
-        </div>
+      <div class="section-address__container container">
+        <h2 class="visually-hidden">Адрес</h2>
+        <p class="section-address__text">приглашаем<br>к сотрудничеству дилеров!</p>
+        <address class="section-address__address">
+          <span class="section-address__address-street">ул.Большая
+            Конюшенная, д. 19/8</span>
+          <span class="section-address__address-city">Санкт-Петербург</span>
+        </address>
       </div>
+      <div class="map" id="map"></div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="container">
       <ul class="main-footer__list">
         <li class="main-footer__item">
-          <a class="main-footer__logotype logotype" href="./index.html" aria-current="page">
+          <a class="main-footer__logotype logotype" href="./index.html">
             <img class="logotype__name" src="images/logotype-name-mobil.svg" width="128" height="24" alt="Товарный знак Кэт Энерджи">
           </a>
         </li>

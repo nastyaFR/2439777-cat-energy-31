@@ -3,16 +3,37 @@
   display: flex;
   justify-content: center;
 
+
+  .section-programs__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0 21px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 0 45px;
+      gap: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 79px 0;
+      flex-direction: row;
+      gap: 80px;
+    }
+  }
+
   .section-programs__item {
-    margin: 0;
-    list-style: none;
-    padding: 21px 20px 18px;
+    padding: 21px 20px;
     background-color: $basic-gray;
     display: grid;
     grid-template-areas:
       "title icon"
       "text  icon"
       "link  icon";
+
+    &--cat-slim::before {
+      margin-bottom: 21px;
+    }
   }
 
   .section-programs__title {
@@ -23,6 +44,7 @@
     font-weight: 400;
     line-height: 37px;
     text-transform: uppercase;
+    padding-bottom: 22px;
 
     &--cat-slim::before {
       content: "";
@@ -30,14 +52,15 @@
       height: 53px;
       display: block;
       background: url("../../icons/cat-slim.svg") no-repeat;
+      margin-right: 20px;
     }
 
     &--cat-pro::before {
       content: "";
       width: 67px;
       height: 50px;
-      display: block;
       background: url("../../icons/cat-pro.svg") no-repeat;
+      margin-right: 11px;
     }
   }
 
@@ -47,6 +70,8 @@
     font-family: "lato", sans-serif;
     font-size: 14px;
     line-height: 18px;
+    border-bottom: 1px solid $basic-light-gray3;
+    padding-bottom: 23px;
   }
 
   .section-programs__link {
@@ -59,6 +84,7 @@
     text-align: center;
     line-height: 16px;
     text-transform: uppercase;
+    padding-top: 19px;
 
     &::after {
       content: "";
@@ -72,7 +98,8 @@
   }
 
   //! планшетная и компьютерная версия
-  @media (min-width: 768px) {
+
+  @media (min-width: $tablet-width) {
     .section-programs__title {
       font-size: 36px;
       line-height: 36px;
@@ -98,6 +125,8 @@
     }
 
     .section-programs__item {
+      padding: 75px 63px 57px 53px;
+
       &--cat-slim::after {
         grid-area: icon;
         content: "";
@@ -105,6 +134,10 @@
         height: 211px;
         display: block;
         background: url("../../icons/cat-slim.svg") no-repeat;
+      }
+
+      &--cat-pro {
+        padding: 77px 29px 57px 53px;
       }
 
       &--cat-pro::after {
@@ -118,8 +151,19 @@
     }
   }
 
-  @media (min-width: 1440px) {
+
+  @media (min-width: $desktop-width) {
     .section-programs__item {
+      &--cat-slim {
+        padding: 41px 61px 55px 52px;
+        width: 50%;
+      }
+
+      &--cat-pro {
+        padding: 45px 61px 55px 52px;
+        width: 50%;
+      }
+
       &--cat-slim::after,
       &--cat-pro::after {
         display: none;

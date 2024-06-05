@@ -1,5 +1,5 @@
 .background-cat {
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     &--mobile {
       position: relative;
     }
@@ -31,7 +31,7 @@
     }
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     &--desktop {
       position: relative;
     }

@@ -9,11 +9,15 @@
 
 
   .page__catalog {
-    .page-header__link {
+    .main-header::after {
+      display: none;
+    }
+
+    .main-nav__link {
       color: $black;
     }
 
-    .page-header__item--active::after {
+    .main-nav__item--current::after {
       background-color: $basic-green;
     }
   }
