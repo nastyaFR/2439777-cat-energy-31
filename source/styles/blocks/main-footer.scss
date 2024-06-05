@@ -36,8 +36,7 @@
     justify-content: center;
   }
 
-
-  @media (min-width: $tablet-width) {
+  @media (min-width: 768px) {
     padding: 55px 0;
 
     .main-footer__list {
@@ -56,8 +55,7 @@
     }
   }
 
-
-  @media (min-width: $desktop-width) {
+  @media (min-width: 1440px) {
     padding: 66px 0;
   }
 }

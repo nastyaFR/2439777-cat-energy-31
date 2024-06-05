@@ -9,7 +9,7 @@
   text-transform: uppercase;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: 768px) {
   .costs__title,
   .costs__content {
     font-size: 20px;

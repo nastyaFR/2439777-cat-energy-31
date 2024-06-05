@@ -66,8 +66,7 @@
     position: relative;
   }
 
-  @media (min-width: $tablet-width) {
-
+  @media (min-width: 768px) {
     .section-example {
       position: relative;
       background-color: transparent;
@@ -119,7 +118,7 @@
       }
     }
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: 1440px) {
       .section-example__container {
         width: 50%;
       }

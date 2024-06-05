@@ -1,4 +1,6 @@
 /* здесь подключите шрифты */
+$primary-font: "oswald", sans-serif;
+
 @include font-face(
   "lato",
   400,

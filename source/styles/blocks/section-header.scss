@@ -23,8 +23,7 @@
 
   //! планшетная версия
 
-  @media (min-width: $tablet-width) {
-
+  @media (min-width: 768px) {
     .section-header__title {
       color: $black;
       font-size: 60px;
