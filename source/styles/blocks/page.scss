@@ -6,19 +6,18 @@
   .page-main {
     flex-grow: 1;
   }
+}
 
+.page--catalog {
+  .main-header::after {
+    display: none;
+  }
 
-  .page__catalog {
-    .main-header::after {
-      display: none;
-    }
+  .main-nav__link {
+    color: $black;
+  }
 
-    .main-nav__link {
-      color: $black;
-    }
-
-    .main-nav__item--current::after {
-      background-color: $basic-green;
-    }
+  .main-nav__item--current::after {
+    background-color: $basic-green;
   }
 }
