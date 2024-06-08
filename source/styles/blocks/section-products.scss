@@ -3,11 +3,11 @@
   padding: 24px 0;
 
   @media (min-width: 768px) {
-    padding: 62px 0 74px;
+    padding: 52px 0 74px;
   }
 
   @media (min-width: 1440px) {
-    padding: 71px 0;
+    padding: 62px 0 72px;
   }
 }
 
@@ -36,11 +36,11 @@
 
 .section-products__item {
   display: grid;
-  justify-content: space-around;
   grid-template-areas:
     "img    title"
     "img    about"
     "button button";
+  position: relative;
   padding: 20px 0 25px;
 
   &::after {
@@ -168,7 +168,7 @@
     flex-direction: column;
   }
 
-  .section-products__card-info {
+  .section-products__card-information {
     padding: 4px 0 8px;
     position: relative;
 
@@ -186,7 +186,7 @@
     }
   }
 
-  .section-products__card-caption {
+  .section-products__card-text {
     font-size: 16px;
     line-height: 20px;
   }
