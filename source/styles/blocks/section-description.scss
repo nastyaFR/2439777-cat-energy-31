@@ -10,8 +10,12 @@
 
 .section-description__list {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 20px;
+}
+
+.section-description__number {
+  display: none;
 }
 
 .section-description__text {

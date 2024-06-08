@@ -5,6 +5,26 @@
 }
 
 .social__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+
+  @include link-bg;
+
+  &::before {
+    transition: all 0.3s;
+  }
+
+  &:hover::before {
+    background-color: $basic-green;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+
+    @include link-bg;
+  }
+
   &--vkontakte::before {
     content: "";
     display: block;
@@ -36,5 +56,11 @@
     mask-repeat: no-repeat;
     mask-size: 28px 22px;
     background-color: $basic-dark-gray3;
+  }
+}
+
+@media (min-width: 768px) {
+  .social {
+    transform: translate(17px, 1px);
   }
 }

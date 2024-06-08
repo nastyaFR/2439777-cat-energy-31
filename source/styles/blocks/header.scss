@@ -1,54 +1,184 @@
 .main-header {
-  @include display-flex;
-  position: relative;
-  min-height: 39px;
-  background-color: $white;
+  display: block;
+  border-bottom: 1px solid $basic-light-gray2;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: $basic-light-gray3;
-    position: absolute;
-    bottom: -1px;
-  }
-
-  .container {
-    margin: 12px 20px;
-
-    @media (min-width: $tablet-width) {
-      margin: 25px 30px 0;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin: 55px 110px 0;
-    }
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .main-header {
-    background: none;
-
-    &::after {
-      display: none;
-    }
-  }
-
-  .main-header__nav {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    min-height: 50px;
+    padding: 10px 0 0;
+    border: none;
+    width: 704px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    border: none;
+    width: 1220px;
+    margin: 0 auto;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .main-header {
-    background: none;
+.main-header__logotype {
+  padding: 12px 0 10px 20px;
 
-    &::after {
-      display: none;
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    margin-right: 94px;
+    padding: 17px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    padding: 10px 0 0;
+  }
+}
+
+.main-header__link {
+  color: $black;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  @media (min-width: $tablet-width) {
+    color: $black;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+.main-header__nav--nojs {
+  .main-header__menu-button {
+    display: none;
+  }
+
+  .main-header__list {
+    display: block;
+  }
+}
+
+.main-header__nav--closed {
+  .main-header__list {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+
+  .main-header__menu-button {
+    background-image: url("../../icons/burger-button.svg");
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.main-header__nav--opened {
+  .main-header__list {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+
+  .main-header__menu-button {
+    background-image: url("../../icons/cross-for-close-mob-menu.svg");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.main-header__list {
+  font-family: "oswald", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  background: $white;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 18px;
+    line-height: 24px;
+    width: 436px;
+    min-height: 50px;
+    background: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 30px;
+    width: 478px;
+  }
+}
+
+.main-header__nav {
+  position: relative;
+}
+
+.main-header__menu-button {
+  border: none;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.main-header__item {
+  border-top: 1px solid $basic-light-gray2;
+  padding: 22px 0 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 33px;
+    padding-top: 30px;
+    border-top: none;
+
+    &:nth-child(1) {
+      padding-left: 0;
+      border-top: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 33px;
+    padding-top: 20px;
+
+    &-:nth-child(1) {
+      padding-left: 0;
     }
   }
 }

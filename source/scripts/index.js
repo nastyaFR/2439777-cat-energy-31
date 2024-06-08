@@ -1,15 +1,18 @@
 /* в этот файл добавляет скрипты*/
-const burgerButton = document.querySelector ('.main-nav__toggle');
-const closeButton = document.querySelector ('.main-nav__close-button');
-const navList = document.querySelector ('.main-nav__list');
+const navMain = document.querySelector('.main-header__nav');
+const navToggle = document.querySelector('.main-header__menu-button');
 
-burgerButton.onclick = function () {
-  burgerButton.classList.add ('main-nav__toggle--special');
-  closeButton.classList.remove ('main-nav__close-button--special');
-  navList.classList.remove ('main-nav__list--hide');
-};
-closeButton.onclick = function () {
-  closeButton.classList.add ('main-nav__close-button--special');
-  burgerButton.classList.remove ('main-nav__toggle--special');
-  navList.classList.add ('main-nav__list--hide');
-};
+navMain.classList.remove('main-header__nav--nojs');
+
+navToggle.addEventListener('click', () => {
+  if (navMain.classList.contains('main-header__nav--closed')) {
+    navMain.classList.remove('main-header__nav--closed');
+    navMain.classList.add('main-header__nav--opened');
+  } else {
+    navMain.classList.add('main-header__nav--closed');
+    navMain.classList.remove('main-header__nav--opened');
+  }
+});
+
+navMain.classList.remove('main-header__nav--opened');
+navMain.classList.add('main-header__nav--closed');
