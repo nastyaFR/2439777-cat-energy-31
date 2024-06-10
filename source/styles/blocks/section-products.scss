@@ -78,6 +78,21 @@
   margin: 0 0 10px;
 }
 
+.section-products__card-link {
+  display: block;
+  padding-bottom: 14px;
+  width: 76px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $basic-dark-gray2;
+
+  @media (min-width: $tablet-width) {
+    width: 135px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
 .section-products__image-container {
   display: flex;
   align-items: center;
