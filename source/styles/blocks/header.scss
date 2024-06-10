@@ -78,12 +78,12 @@
   background-color: $white;
   cursor: pointer;
 
-  .main-header__nav--closed .main-header__list {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-  @media (min-width: $tablet-width) {
+  .main-header__nav--closed .main-header__list {
     display: none;
   }
 }
